@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: test-component-kskf
+  namespace: build-e2e-utia-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio-qe/test-images@sha256:14c8aa0e73102f2c56f092c1522558bed56541a4a4a450c99a268e073803d86e
+        name: my-python
+        resources: {}
+status: {}
